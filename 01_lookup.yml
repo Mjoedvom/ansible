@@ -3,9 +3,9 @@
   hosts: linuxservers
 
   vars:
-     environment: "{{ lookup('file', 'file.txt') }}"
+     File_contents: "{{ lookup('file', 'file.txt') }}"
 
   tasks:
-    - name: Debug Write File Content
-      ansible.builtin.debug:
-        msg: "{{ environment }}"
+      - name: Debug Write File Content
+        ansible.builtin.debug:
+        msg: "{{ File_contents }}"
