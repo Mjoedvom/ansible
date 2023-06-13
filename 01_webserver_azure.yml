@@ -1,6 +1,6 @@
 ---
 - name: Configure Webserver
-  hosts: tag_solution_webserver_hrin
+  hosts: tag_solution_webserver_hrinadm
   become: true
   vars:
     websiteheader: "Ansible Playbook - Playbooks r' us"
