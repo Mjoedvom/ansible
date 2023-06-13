@@ -4,7 +4,7 @@
   become: true
 
   vars:
-    package: 
+    package:
       - httpd
       - mariadb-server
       - php
