@@ -9,14 +9,14 @@
 
     - name: Set x on set_server_offline.sh
       ansible.builtin.file:
-        path: ~/ansibleclass/set_server_offline.sh
+        path: ~/git/ansible/set_server_offline.sh
         state: touch
         mode: +x
       delegate_to: localhost
 
     - name: Write File
       ansible.builtin.command:
-        cmd: ~/ansibleclass/set_server_offline.sh "{{ ansible_facts['nodename'] }}" "{{ ansible_facts['all_ipv4_addresses'][0] }}"
+        cmd: ~/git/ansible/set_server_offline.sh "{{ ansible_facts['nodename'] }}" "{{ ansible_facts['all_ipv4_addresses'][0] }}"
       register: output
       changed_when: output.rc == 0
       delegate_to: localhost
