@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   vars:
-    user: hrin
+    user: hrinadm
     location: northeurope
     virtual_network_name: "webserver_{{ user }}"
     subnet: Webserver
@@ -109,4 +109,4 @@
         timeout: 600
 
     - name: Add webserver to ssh known_hosts
-      shell: "ssh-keyscan -t ecdsa {{ webserver_pub_ip.state.ip_address }}  >> /home/{{ user }}adm/.ssh/known_hosts"
+      shell: "ssh-keyscan -t ecdsa {{ webserver_pub_ip.state.ip_address }}  >> /home/{{ user }}/.ssh/known_hosts"

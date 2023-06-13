@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   vars:
-    user: hrin
+    user: hrinadm
 
   tasks:
     - name: Delete resource group
